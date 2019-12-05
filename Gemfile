@@ -17,7 +17,8 @@ gem "bootstrap"
 gem "jquery-rails"
 gem "popper_js"
 gem "tether-rails"
-gem 'devise'
+gem "devise"
+gem "font-awesome-sass"
 
 group :development, :test do
   gem "byebug", platforms: %i[mri mingw x64_mingw]
