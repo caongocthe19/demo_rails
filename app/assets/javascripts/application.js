@@ -6,4 +6,4 @@
 //= require activestorage
 //= require turbolinks
 //= require main
-//= require_tree .
+//= require vegas
