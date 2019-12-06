@@ -1,13 +1,15 @@
-body {
+body, #ShowSlideShowHere {
   font-family: Raleway;
+}
+
+#ShowSlideShowHere {
   font-weight: 900;
   color: #fff;
-  background: #000;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, p, strong {
+.title-content, .title-content-h2, .title-content-p, .title-strong {
   margin: 5px 0;
   padding: 0;
   margin-right: 130px;
@@ -20,13 +22,13 @@ h1, h2, p, strong {
      0 0 10px #000;
 }
 
-h1 {
+.title-content {
   font-size: 5.5em;
   letter-spacing: -10px;
   margin-bottom: -10px;
 }
 
-h1 strong {
+.title-content .title-strong {
   position: absolute;
   top: -50px;
   right: 0;
@@ -35,13 +37,18 @@ h1 strong {
   margin: 0;
 }
 
-h2 {
+.title-content-h2 {
   opacity: .6;
   font-size: 1.7em;
 }
 
 .header {
-  background-color: #ffc000ab;
+  background-color: #fdc827e6;
+}
+
+#ShowSlideShowHere {
+  width: 100%;
+  height: 613px;
 }
 
 .content-banner {
@@ -65,7 +72,7 @@ h2 {
   }
 }
 
-.container {
+.vegas-banner {
   position: absolute;
   bottom: 2em;
   right: 2em;
@@ -89,4 +96,61 @@ h2 {
   100% {
     transform: scale(.8);
   }
+}
+
+i.fa.fa-facebook, i.fa.fa-github, i.fa.fa-twitter, i.fa.fa-google-plus-square {
+  font-size: 40px;
+  margin: 5px;
+  color: #267ea9;
+}
+
+.service {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ffc1071f;
+}
+
+.line {
+  width: 40%;
+  height: 3px;
+  background: #96cb47;
+  left: 50%;
+  margin: auto;
+}
+
+.content-introduce {
+  padding: 15px 0 10px 0;
+}
+
+.content-introduce span {
+  font-size: 20px;
+}
+
+.slogan{
+  padding-bottom: 10px;
+}
+
+.line {
+  margin-bottom: 10px;
+}
+
+.btn-introduce {
+  border-radius: 99px;
+  font-size: 20px;
+}
+
+.section-title-man {
+  padding-top: 40px;
+}
+
+span.fa.fa-phone, span.fa.fa-home, span.fa.fa-clock-o, span.fa.fa-heart-o {
+  font-size: 70px;
+}
+
+.icon-box-text {
+  padding: 10px 0 10px 0;
+}
+
+.content-footer {
+  padding: 20px 0 10px 0;
 }
