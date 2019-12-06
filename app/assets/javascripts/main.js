@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('body').vegas({
+  $('#ShowSlideShowHere').vegas({
     overlay: true,
     transition: 'fade',
     transitionDuration: 4000,
