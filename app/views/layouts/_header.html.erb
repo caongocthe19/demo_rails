@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-fixed-top navbar-light header">
-  <a class="navbar-brand" href="#">Navbar</a>
+  <%= link_to "Home", root_path, class: "navbar-brand" %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -26,8 +26,22 @@
       </li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#" class="nav-link"><span class="fa fa-user"></span>Sign Up</a></li>
-      <li><a href="#" class="nav-link"><span class="fa fa-sign-out"></span> Login</a></li>
+      <% if user_signed_in? %>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete, class: "nav-link" do %>
+            <span class="fa fa-sign-out">Logout</span>
+          <% end %>
+        </li>
+      <% else %>
+        <%= link_to new_user_session_path, class: "nav-link" do %>
+          <span class="fa fa-sign-out">Login</span>
+        <% end %>
+        <li>
+          <%= link_to new_user_registration_path, class: "nav-link" do %>
+            <span class=" fa fa-user">Sign Up</span>
+          <% end %>
+        </li>
+      <% end %>
     </ul>
   </div>
 </nav>

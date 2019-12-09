@@ -7,3 +7,4 @@
 //= require turbolinks
 //= require main
 //= require vegas
+//= require toastr
