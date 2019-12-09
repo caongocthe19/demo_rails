@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DemoRails</title>
+    <title>Dashboard Admin</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,11 +10,10 @@
   </head>
 
   <body>
+  <script>
+    <%= sanitize custom_bootstrap_flash %>
+  </script>
     <%= render "layouts/header" %>
-    <script>
-      <%= sanitize custom_bootstrap_flash %>
-    </script>
     <%= yield %>
-    <%= render "layouts/footer" %>
   </body>
 </html>
