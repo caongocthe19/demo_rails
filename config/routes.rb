@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   namespace :admin do
-    get "/dashboard", to: "admin/dashboard#index", as: "dashboard"
+    get "/dashboard", to: "dashboard#index", as: "dashboard"
+    resources :services
   end
 end

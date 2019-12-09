@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def after_sign_in_path_for(_resource)
-    dashboard = { "admin" => dashboard_path, "client" => root_path }
+    dashboard = { "admin" => admin_dashboard_path, "client" => root_path }
     dashboard[current_user.role]
   end
 
