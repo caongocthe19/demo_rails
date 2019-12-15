@@ -8,3 +8,6 @@
 //= require main
 //= require vegas
 //= require toastr
+
+//= require sb-admin.min
+
