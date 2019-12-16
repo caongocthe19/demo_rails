@@ -8,7 +8,4 @@
 //= require main
 //= require vegas
 //= require toastr
-//= require Chart.min
 //= require sb-admin.min
-//= require datatables-demo
-//= require chart-area-demo

@@ -2,7 +2,7 @@
 
 module Admin
   class ServicesController < BaseController
-    before_action :find_service, only: [:edit, :destroy, :update]
+    before_action :find_service, only: %i[edit destroy update]
 
     def index
       @services = Service.newest
@@ -21,21 +21,19 @@ module Admin
       end
     end
 
-    def edit
+    def edit; end
+
+    def destroy
+      redirect_to admin_services_path, flash: { success: "Destroy successfully!" } if @service.destroy
     end
 
-    def destroy   
-      redirect_to admin_services_path, flash: { success: "Destroy successfully!" } if @service.destroy
-    end   
-
-    def update   
-      if @service.update(service_params)   
-        redirect_to admin_services_path, flash: { success: "Service updated!" }  
-      else   
+    def update
+      if @service.update(service_params)
+        redirect_to admin_services_path, flash: { success: "Service updated!" }
+      else
         render :edit, flash: { error: "Update failed!" }
-      end   
-    end 
-
+      end
+    end
 
     private
 
