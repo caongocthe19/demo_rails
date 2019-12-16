@@ -1,0 +1,27 @@
+<div class="container" style="padding-top: 20px">
+	<h2 class="text-center">All Customers</h2>
+	<table class="table text-center">
+		<thead>
+			<tr>
+				<th scope="col">STT</th>
+				<th scope="col">Name</th>
+				<th scope="col">Address</th>
+				<th scope="col">Phone</th>
+				<th scope="col">Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% i = 0 %>
+			<% @customers.each do |customer| %>
+				<tr>
+					<td><%= i += 1 %></td>
+					<td><%= customer.name %></td>
+					<td><%= customer.address %></td>
+					<td><%= customer.phone %></td>
+					<td><%= link_to "Edit", edit_admin_customer_path(customer), class: "btn btn-primary" %> | <%= link_to "Destroy", admin_customer_path(customer), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+	<%= link_to "Create", new_admin_customer_path, class: "btn btn-success"
+</div>
