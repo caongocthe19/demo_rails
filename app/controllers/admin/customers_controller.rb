@@ -1,46 +1,48 @@
+# frozen_string_literal: true
+
 module Admin
-	class CustomersController < ApplicationController
-		before_action :find_customer, only: %i[edit destroy update]
+  class CustomersController < BaseController
+    before_action :find_customer, only: %i[edit destroy update]
 
-	  	def edit;end
+    def index
+      @customers = Customer.newest
+    end
 
-	  	def index
-	  		@customers = Customer.newest
-	  	end
+    def new
+      @customer = current_user.customers.new
+    end
 
-	  	def new
-	  		@customer = Customer.new
-	  	end
+    def create
+      @customer = current_user.customers.new(customer_params)
+      if @customer.save
+        redirect_to admin_customers_path, flash: { success: "Create customer succcessfully!" }
+      else
+        render :new
+      end
+    end
 
-	  	def create
-	  		@customer = Customer.new(customer_params)
-	  		if @customer.save
-	  			redirect_to admin_customer_path, flash: { success: "Create service succcessfully"}
-	  		else
-	  			render :new	
-	  		end
-		end
+    def edit; end
 
-		def destroy
-			redirect_to admin_customer_path, flash: { success: "Destroy successfully" }
-		end
+    def destroy
+      redirect_to admin_customers_path, flash: { success: "Destroy successfully" } if @customer.destroy
+    end
 
-		def update
-			if @customer.update(customer_params)
-				redirect_to admin_customer_path, flash: { success: "Customer Update!" }
-			else
-				render :edit, flash: { error: "Update failed! "}
-			end
-		end
+    def update
+      if @customer.update(customer_params)
+        redirect_to admin_customers_path, flash: { success: "Customer Update!" }
+      else
+        render :edit, flash: { error: "Update failed! " }
+      end
+    end
 
-		private
+    private
 
-		def customer_params
-			params.require(:customer).permit(:name, :address, :phone)
-		end
+    def customer_params
+      params.require(:customer).permit(:name, :address, :phone)
+    end
 
-		def find_customer
-			@customer = Customer.find(params[:id])
-		end
-	end
+    def find_customer
+      @customer = Customer.find(params[:id])
+    end
+  end
 end
