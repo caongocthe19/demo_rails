@@ -1,19 +1,22 @@
-require 'test_helper'
+# frozen_string_literal: true
 
-class Admin::CustomersControllerTest < ActionDispatch::IntegrationTest
-  test "should get edit" do
-    get admin_customers_edit_url
-    assert_response :success
+require "test_helper"
+
+module Admin
+  class CustomersController < ActionDispatch::IntegrationTest
+    test "should get edit" do
+      get admin_customers_edit_url
+      assert_response :success
+    end
+
+    test "should get index" do
+      get admin_customers_index_url
+      assert_response :success
+    end
+
+    test "should get new" do
+      get admin_customers_new_url
+      assert_response :success
+    end
   end
-
-  test "should get index" do
-    get admin_customers_index_url
-    assert_response :success
-  end
-
-  test "should get new" do
-    get admin_customers_new_url
-    assert_response :success
-  end
-
 end
