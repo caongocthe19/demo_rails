@@ -6,5 +6,5 @@ class Customer < ApplicationRecord
 
   validates :name, :address, :phone, presence: true
 
-  scope :newest, -> { order created_at: :DESC}
+  scope :newest, -> { order created_at: :DESC }
 end
