@@ -1,0 +1,16 @@
+$(document).ready(function(){
+  $('#ShowSlideShowHere').vegas({
+    overlay: true,
+    transition: 'fade',
+    transitionDuration: 4000,
+    delay: 20000,
+    color: 'red',
+    animation: 'random',
+    animationDuration: 20000,
+    slides: [
+    { src: '<%= asset_path "banner/advice.png" %>'},
+    { src: '<%= asset_path "banner/banner04.png" %>'},
+    { src: '<%= asset_path "banner/banner07.jpg" %>'},
+    ]
+  });
+})

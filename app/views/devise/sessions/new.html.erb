@@ -1,35 +1,29 @@
-<div class="container">
-  <div class="loginForm">
-    <div class="row">
-      <div class="col-12">
-        <h1 class="login-content">Login</h1>
-        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-          <div class="form-group has-feedback">       
-            <%= f.label :email, class: "form-label" %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "form-control form-input" %>
-            <span class="glyphicon form-control-feedback"></span>
-          </div>
-
-          <div class="form-group has-feedback">
-            <%= f.label :password, class: "form-label" %><br />
-            <%= f.password_field :password, autocomplete: "current-password", class: "form-control form-input" %>
-            <span class="glyphicon form-control-feedback"></span>
-          </div>
-
-          <!--   <% if devise_mapping.rememberable? %>
-            <div class="field">
-              <%= f.check_box :remember_me %>
-              <%= f.label :remember_me %>
-            </div>
-            <% end %> -->
-
-          <div class="actions">
-            <%= f.submit "Log in", class: "btn btn-default submit" %>
-          </div>
-        <% end %>
-      </div>
+<div class="login">
+  <div class="loginbox">
+    <%= image_tag("avatar.png", :alt => "login", class: "avatar") %>
+    <h1>Login Here</h1>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="field">       
+      <%= f.label :email, class: "loginbox-label" %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "loginbox-textpassword" %>
     </div>
-  </div>
-</div>
 
+    <div class="field">
+      <%= f.label :password, class: "loginbox-label" %><br />
+      <%= f.password_field :password, autocomplete: "current-password", class: "loginbox-textpassword" %>
+    </div>
+
+<!--   <% if devise_mapping.rememberable? %>
+<div class="field">
+<%= f.check_box :remember_me %>
+<%= f.label :remember_me %>
+</div>
+<% end %> -->
+
+<div>
+  <%= f.submit "Log in", class: "loginbox-submit" %>
+</div>
+<% end %>
+</div>
+</div>
 <%= render "devise/shared/links" %>

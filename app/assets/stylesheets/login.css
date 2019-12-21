@@ -1,114 +1,88 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster|Mako');
-
-.login-content {
-  font-family: 'Lobster', cursive;
-  padding: 5% 0 7% 0;
+.login{
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    background-image: url("pic1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
-.btn-default {
-  border-color: transparent;
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
 }
 
-.btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus {
-  outline: 0 auto -webkit-focus-ring-color;
-  outline-offset: 0;
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
 }
 
-.form-group {
-  height: 50px;
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
 }
 
-.form-input {
-  font-size: 100%;
-  letter-spacing: .07em;
-  border: 1px solid transparent;
-  box-shadow: inset 0 1px 1px transparent;
+.loginbox-label{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
 }
 
-:focus {
-  outline: -webkit-focus-ring-color auto 0;
+.loginbox-textpassword
+{
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.loginbox-submit
+{
+    width: 100%;
+    margin-bottom: 20px;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.loginbox-submit:hover
+{
+    width: 100%;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+.loginbox-sigup{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
 }
 
-.form-control:focus {
-  -webkit-box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
-  box-shadow: inset 0 1px 1px transparent, 0 0 8px transparent;
-}
-
-.form-label {
-  position: absolute;
-  pointer-events:none;
-  top: 3px;
-  font-size: 110%;
-  transition: .2s ease all; 
-  -moz-transition: .2s ease all; 
-  -webkit-transition: .2s ease all;
-}
-
-.form-input:focus ~ .form-label, 
-.form-input:valid ~ .form-label 		{
-  top:-17px;
-  font-size: 95%;
-}
-
-.has-success .form-control-feedback {
-  color: #4cbd38;
-}
-
-.has-warning .form-control-feedback {
-  color: #dab91a;
-}
-
-.has-error .form-control-feedback {
-  color: #ec2824;
-}
-
-/*================== LOGIN ==================*/
-.loginForm {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 25%;
-  margin: 0 auto;
-  font-family: 'Mako', sans-serif;
-  letter-spacing: .1em;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #dffeff;
-  color: #32797c;
-}
-
-.loginForm .form-control {
-  background-color: transparent;
-  border-bottom: 2px solid #32797c;
-  border-radius: 0;
-  padding-left: 0;
-}
-
-.loginForm .form-control:focus {
-  border-color: transparent;
-  border-bottom: 2px solid #9c9e9f;
-}
-
-.submit {
-  margin-top: 4%;
-  margin-bottom: 1%;
-  width: 100%;
-  font-size: 100%;
-  letter-spacing: .1em;
-  color: #32797c;
-  background-color: #9cdfe2;
-}
-
-.btn-default.focus,
-.btn-default.submit:focus,
-.btn-default.submit:hover {
-  color: #fff;
-  background-color: #009898;
-  border-color: transparent;
-}
-
-.loginPwReset {
-  margin-top: .625em;
+.loginbox-sigup:hover
+{
+    color: #ffc107;
 }

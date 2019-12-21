@@ -3,7 +3,6 @@ body, #ShowSlideShowHere {
 }
 
 footer {
-  position: absolute;
   width: 100%;
   top: 100vh;
 }
@@ -133,7 +132,9 @@ i.fa.fa-facebook, i.fa.fa-github, i.fa.fa-twitter, i.fa.fa-google-plus-square {
 }
 
 .slogan{
-  padding-bottom: 10px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .line {
@@ -159,4 +160,17 @@ span.fa.fa-phone, span.fa.fa-home, span.fa.fa-clock-o, span.fa.fa-heart-o {
 
 .content-footer {
   padding: 20px 0 10px 0;
+}
+/*them css */
+.card-title {
+  color: blue;
+}
+.advice{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #33C4FF;
+  color: white;
+}
+.text-advice{
+  padding-bottom: 10px;
 }
