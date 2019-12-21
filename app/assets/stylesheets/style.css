@@ -3,7 +3,7 @@ body, #ShowSlideShowHere {
 }
 
 footer {
-  position: absolute;
+  position: relative;
   width: 100%;
   top: 100vh;
 }
