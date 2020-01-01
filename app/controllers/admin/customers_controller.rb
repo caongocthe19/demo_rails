@@ -13,9 +13,9 @@ module Admin
     end
 
     def create
-      @customer = current_user.customers.new(customer_params)
+      @customer = Customer.new(customer_params)
       if @customer.save
-        redirect_to admin_customers_path, flash: { success: "Create customer succcessfully!" }
+        redirect_to admin_customer_path, flash: { success: "Create service succcessfully" }
       else
         render :new
       end
